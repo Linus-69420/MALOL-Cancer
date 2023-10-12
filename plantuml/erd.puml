@@ -1,0 +1,13 @@
+@startuml
+
+entity Gene {
+
+}
+
+entity Species {
+    * SpeciesId
+    --
+    * Name
+}
+
+@enduml
