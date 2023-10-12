@@ -1,0 +1,9 @@
+= SynLetProject
+
+== Team M~oritz~A~rmin~L~inus~O~liver~L~uka~
+
+Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
+
+== Projekt Ziel
+
+Daten ANALysieren
