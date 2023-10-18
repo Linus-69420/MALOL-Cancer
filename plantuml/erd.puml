@@ -1,7 +1,20 @@
 @startuml
+left to right direction
+
+entity GenePair {
+    * Gene1
+    * Gene2
+    --
+    * rCellLine
+    * rPubMedId
+    * rSource
+    * rStatisticScore
+}
 
 entity Gene {
-
+    * Identifier
+    --
+    * Name
 }
 
 entity Species {
@@ -9,5 +22,8 @@ entity Species {
     --
     * Name
 }
+
+Species "1"---"n" GenePair
+GenePair "1"---"2" Gene
 
 @enduml
