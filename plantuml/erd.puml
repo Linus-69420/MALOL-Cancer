@@ -24,6 +24,6 @@ entity Species {
 }
 
 Species "1"---"n" GenePair
-GenePair "1"---"2" Gene
+GenePair "m"---"2" Gene
 
 @enduml
