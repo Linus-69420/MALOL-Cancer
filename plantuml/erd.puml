@@ -1,7 +1,7 @@
 @startuml
 left to right direction
 
-entity GenePair {
+entity GenePairSL {
     * Gene1
     * Gene2
     --
@@ -11,10 +11,16 @@ entity GenePair {
     * rStatisticScore
 }
 
+entity MappingData {
+    * Gene1
+    * Gene2
+}
+
 entity Gene {
     * Identifier
     --
     * Name
+    * EssentialScore
 }
 
 entity Species {
@@ -23,7 +29,8 @@ entity Species {
     * Name
 }
 
-Species "1"---"n" GenePair
-GenePair "m"---"2" Gene
+Species "1"---"n" Gene
+GenePairSL "m"---"2" Gene
+MappingData "1"---"2" Gene
 
 @enduml
