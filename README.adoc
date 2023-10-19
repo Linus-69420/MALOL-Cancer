@@ -19,25 +19,43 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 * Dieses wird an die DB geschickt. Die DB schaut ob es dieses Gen x in einem Tier gibt.
 * Wenn ja, schaut man welche TierGenCombo {Gen x (im Tier) : Gen b} bei tieren die höchste Letalitätsrate hat.
 * So hat man genpaare: {MausGen x ; MausGen b ; Lethality} -> Man schaut beim Tier-Human-Mapping Welches Gen im Mensch dem Gen MausGen b entspricht.
-
-.Problem: Maus/Human Mapping haben 1:1 (Heißt Das Maus Gen ist Genau das Mensch Gen), aber 1 : n (Das MausGen sind mehrere Gene im Mensch)
-
 * Dan hat man die Gene im Menschen die den Genen der Maus entsprechen, die das anfangs gen x auslöschen.
 * Man muss noch schauen ob diese Menschen-Gene für den Mensch essenziell sind.
 * Wenn nicht kann man annehmen das das Gen x im Menschen durch ein Gen (Das in der Maus eine Zelle auslöscht) auch im Menschen eine Zelle auslöscht.
 
 === IDs Mapping
 
-Oma Seite:  entrez Gen Id(Mapping) stimmen mit den Id's HumanSl / FlySL / MouseSL überein
+* Oma Seite:  entrez Gen Id(Mapping) stimmen mit den Id's HumanSl / FlySL / MouseSL überein
+* Die ncbi_id der essential Gene passen mit den anderen überein.
 
-// OGEE: Online GEne Essential database v3.09
+== Gelöschte Daten
 
-// Short forms used:
-// CSEGs	Cancer-specific essential genes
-// CEGs	Core-essential genes
-//
+Spalten aus den Originalen Daten die für uns unnötig sind
+
+Bei Spezies:
+
+* r.cell_line -> immer null
+* r.pubmed_id  -> Id des Papers das die Lethality herausgefunden hat
+* r.source -> Quelle unnötig
+
+Mappings:
+
+* Relationen(1:1 1:m ...) wird nicht benötigt, die gene sind mehrmals da
+* Spalte nach Relationen ist unnötig
+* Rows mit HUMAN{id} werden ignoriert
+
+Essential
+
+* esembl -> unnötig
+
+== ERD
+
+[plantuml, erd, svg]
+----
+include::plantuml/erd.puml[]
+----
+
+
 // Criteria used for classifying CSEGs and CEGs:
 // CSEGs - Genes tested in more than 10 cell lines and essential in only one particular cancer.
 // CEGs - Genes essential in 80% or more tested cell lines.
-//
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
