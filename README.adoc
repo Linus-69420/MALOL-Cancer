@@ -29,7 +29,15 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 === IDs Mapping
 
 Oma Seite:  entrez Gen Id(Mapping) stimmen mit den Id's HumanSl / FlySL / MouseSL überein
-Aber nur manchmal nicht alle? Was ist das??
 
-Essential Genes stimmt die locus id manchmal mit den SL ids überein also ned imma?
+// OGEE: Online GEne Essential database v3.09
 
+// Short forms used:
+// CSEGs	Cancer-specific essential genes
+// CEGs	Core-essential genes
+//
+// Criteria used for classifying CSEGs and CEGs:
+// CSEGs - Genes tested in more than 10 cell lines and essential in only one particular cancer.
+// CEGs - Genes essential in 80% or more tested cell lines.
+//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
