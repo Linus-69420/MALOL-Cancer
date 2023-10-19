@@ -15,12 +15,12 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 === Angabe
 
 * Gen x (Mensch) verursacht im Menschen Krebs.
-* Dieses wird an die DB geschickt. Die DB schaut ob es dieses Gen x in einem Tier gibt.
-* Wenn ja, schaut man welche TierGenCombo {Gen x (im Tier) : Gen b} bei tieren die höchste Letalitätsrate hat.
-* So hat man genpaare: {MausGen x ; MausGen b ; Lethality} -> Man schaut beim Tier-Human-Mapping Welches Gen im Mensch dem Gen MausGen b entspricht.
-* Dan hat man die Gene im Menschen die den Genen der Maus entsprechen, die das anfangs gen x auslöschen.
-* Man muss noch schauen ob diese Menschen-Gene für den Mensch essenziell sind.
-* Wenn nicht kann man annehmen das das Gen x im Menschen durch ein Gen (Das in der Maus eine Zelle auslöscht) auch im Menschen eine Zelle auslöscht.
+* Dieses wird an die DB geschickt. Die DB schaut, ob es dieses Gen x in einem Tier gibt.
+* Wenn ja, schaut man welche TierGenCombo {Gen x (im Tier) : Gen b} bei Tieren die höchste Letalitätsrate hat.
+* So hat man Genpaare: {MausGen x ; MausGen b ; Lethality} -> Man schaut beim Tier-Human-Mapping, welches Gen im Mensch dem MausGen b entspricht.
+* Dann hat man die Gene im Menschen, die den Genen der Maus entsprechen, die das anfangs gen x auslöschen.
+* Man muss noch schauen, ob diese Menschen-Gene für den Mensch essenziell sind.
+* Wenn nicht, kann man annehmen, dass das Gen x im Menschen durch ein Gen (Das in der Maus eine Zelle auslöscht) auch im Menschen eine Zelle auslöscht.
 
 === IDs Mapping
 
@@ -61,7 +61,7 @@ include::plantuml/erd.puml[]
 
 == Datenbank
 
-Wir haben uns für SQL-Lite entschieden, weil die Anzahl an Daten im nicht den Rahmen sprengt und
+Wir haben uns für SQL-Lite entschieden, weil die Anzahl an Daten nicht den Rahmen sprengt und
 es einfach ist in einer Gruppe an SQL-Lite zu arbeiten.
 
 
