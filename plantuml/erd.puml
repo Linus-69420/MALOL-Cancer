@@ -2,25 +2,17 @@
 left to right direction
 
 entity GenePairSL {
-    * Gene1
-    * Gene2
-    --
-    * rCellLine
-    * rPubMedId
-    * rSource
     * rStatisticScore
 }
 
 entity MappingData {
-    * Gene1
-    * Gene2
 }
 
 entity Gene {
     * Identifier
     --
     * Name
-    * EssentialScore
+    * Essentiality
 }
 
 entity Species {
@@ -30,7 +22,7 @@ entity Species {
 }
 
 Species "1"---"n" Gene
-GenePairSL "m"---"2" Gene
-MappingData "1"---"2" Gene
+GenePairSL "n"---"2" Gene
+MappingData "n"---"2" Gene
 
 @enduml

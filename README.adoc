@@ -61,8 +61,14 @@ include::plantuml/erd.puml[]
 
 == Datenbank
 
-Wir haben uns für SQL-Lite entschieden, weil die Anzahl an Daten nicht den Rahmen sprengt und
+Wir haben uns für SQLite entschieden, weil die Anzahl an Daten nicht den Rahmen sprengt und
 es einfach ist in einer Gruppe an SQL-Lite zu arbeiten.
 
+=== Create Statements
+
+[source, sql]
+----
+include::databaseQueries/createTables.sql[]
+----
 
 
