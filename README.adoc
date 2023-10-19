@@ -10,10 +10,9 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 
 * Mensch
 * Maus
-* Fliege
+* Fliege (wgbr)
 
-=== Unsere gedachte Angabe
-
+=== Angabe
 
 * Gen x (Mensch) verursacht im Menschen Krebs.
 * Dieses wird an die DB geschickt. Die DB schaut ob es dieses Gen x in einem Tier gibt.
@@ -48,6 +47,11 @@ Essential
 
 * esembl -> unnötig
 
+Criteria used for classifying CSEGs and CEGs:
+
+* CSEGs - Genes tested in more than 10 cell lines and essential in only one particular cancer.
+* CEGs - Genes essential in 80% or more tested cell lines.
+
 == ERD
 
 [plantuml, erd, svg]
@@ -55,7 +59,10 @@ Essential
 include::plantuml/erd.puml[]
 ----
 
+== Datenbank
 
-// Criteria used for classifying CSEGs and CEGs:
-// CSEGs - Genes tested in more than 10 cell lines and essential in only one particular cancer.
-// CEGs - Genes essential in 80% or more tested cell lines.
+Wir haben uns für SQL-Lite entschieden, weil die Anzahl an Daten im nicht den Rahmen sprengt und
+es einfach ist in einer Gruppe an SQL-Lite zu arbeiten.
+
+
+
