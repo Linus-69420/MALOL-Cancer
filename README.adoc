@@ -54,10 +54,7 @@ Criteria used for classifying CSEGs and CEGs:
 
 == ERD
 
-[plantuml, erd, svg]
-----
-include::plantuml/erd.puml[]
-----
+image::http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Linus-69420/MALOL-Cancer/main/plantuml/erd.puml[]
 
 == Datenbank
 
