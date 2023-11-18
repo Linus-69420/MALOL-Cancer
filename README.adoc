@@ -41,7 +41,6 @@ Mappings:
 
 * Relationen(1:1 1:m ...) wird nicht benötigt, die gene sind mehrmals da
 * Spalte nach Relationen ist unnötig
-* Rows mit HUMAN{id} werden ignoriert
 
 Essential
 
