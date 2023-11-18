@@ -13,7 +13,7 @@ CREATE TABLE Species(
 CREATE TABLE Gene(
     Identifier INTEGER NOT NULL ,
     Name TEXT NOT NULL ,
-    Essentiality INTEGER Null,
+    Essentiality TEXT Null,
     SpeciesId INTEGER NOT NULL,
     PRIMARY KEY (Identifier),
     FOREIGN KEY (SpeciesId) REFERENCES Species (SpeciesId)
