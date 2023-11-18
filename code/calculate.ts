@@ -16,10 +16,10 @@ import {GenePairSL} from "./model/GenePairSL";
     if (essentiality === null || essentiality.Essentiality === null) {
         essentialScore = 1;
     }
-    else if (essentiality.Essentiality === "CSEG") {
+    else if (essentiality.Essentiality === "CSEGs") {
         essentialScore = 0.3;
     }
-    else if (essentiality.Essentiality === "CEG") {
+    else if (essentiality.Essentiality === "CEGs") {
         essentialScore = 0.05;
     }
     coreScore *= essentialScore;
