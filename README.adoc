@@ -68,4 +68,12 @@ es einfach ist in einer Gruppe an SQL-Lite zu arbeiten.
 include::databaseQueries/createTables.sql[]
 ----
 
+== Gene-Inputs
 
+* 84930
+
+image::img/gene-84930.png[]
+
+* 18148
+
+image::img/gene-18148.png[]
