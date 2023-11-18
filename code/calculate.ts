@@ -2,7 +2,7 @@ import {DB} from "./connection";
 import {GenePairSL} from "./model/GenePairSL";
 
 (async() => {
-    const inputGene: number = 1;
+    const inputGene: number = 84930;
     let coreScore = 10;
     let essentialScore = 0;
     const db = await DB.createDBConnection();
@@ -62,6 +62,31 @@ import {GenePairSL} from "./model/GenePairSL";
             }
             else {
                 console.log("Gene " + mdm.Gene2Id + " + Gene " + genePair.Gene1Id + " = " + score + " (score)");
+            }
+        }
+    }
+
+    let mappingDataFly = await db.all(
+        'select m.Gene2Id from MappingData m join Gene g on (m.Gene2Id = g.Identifier) where m.Gene1Id = ?1 and g.SpeciesId = 2', inputGene);
+    //console.log(mappingDataFly);
+
+    console.log("\nHuman -> Fly Mapping");
+    for (const mdf of mappingDataFly) {
+        console.log("Human-Gene " + inputGene + " can be mapped to Fly-Gene " + mdf.Gene2Id + ".")
+    }
+
+    console.log("\nSL Fly:");
+    for (const mdf of mappingDataFly) {
+        let genePairs: GenePairSL[] = await db.all<GenePairSL[]>(
+            'select * from GenePairSL where Gene1Id = ?1 or Gene2Id = ?2', [mdf.Gene2Id, mdf.Gene2Id]);
+
+        for (const genePair of genePairs) {
+            let score = Math.round((coreScore * (genePair.rStatisticScore / 100)) * 100) / 100;
+            if (genePair.Gene1Id === mdf.Gene2Id) {
+                console.log("Gene " + mdf.Gene2Id + " + Gene " + genePair.Gene2Id + " = " + score + " (score)");
+            }
+            else {
+                console.log("Gene " + mdf.Gene2Id + " + Gene " + genePair.Gene1Id + " = " + score + " (score)");
             }
         }
     }
