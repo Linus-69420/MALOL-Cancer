@@ -12,4 +12,17 @@ export class DB {
 
         return db;
     }
+
+    public static async beginTransaction(connection: Database): Promise<void> {
+        await connection.run('begin transaction;');
+    }
+
+    public static async commitTransaction(connection: Database): Promise<void> {
+        await connection.run('commit;');
+    }
+
+    public static async rollbackTransaction(connection: Database): Promise<void> {
+        await connection.run('rollback;');
+    }
+
 }
