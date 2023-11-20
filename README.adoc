@@ -95,6 +95,13 @@ tsc [filename].ts
 node [filename].js
 ----
 
+=== How To Get Score For Gene
+
+[source, bash]
+----
+npx ts-node calculate.ts [geneId]
+----
+
 == Description for Typescript Files
 
 * insertEssentialyHuman
@@ -107,3 +114,4 @@ into the database (table: MappingData)
 * insertSLData
 ** inserts sl-data from Human_SL.csv, Fly_SL.csv and Mouse_SL.csv into the database
 (table: GenePairSL)
+
