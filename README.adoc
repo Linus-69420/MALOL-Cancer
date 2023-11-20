@@ -60,6 +60,10 @@ image::http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubuse
 Wir haben uns für SQLite entschieden, weil die Anzahl an Daten nicht den Rahmen sprengt und
 es einfach ist in einer Gruppe an SQL-Lite zu arbeiten.
 
+== Daten Verarbeiten
+
+Wir benutzen Typescript um die Daten in unsere Datenbank einzuspielen und auch um Abfragen durchzuführen.
+
 === Create Statements
 
 [source, sql]
