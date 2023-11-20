@@ -24,7 +24,7 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 
 === IDs Mapping
 
-* Oma Seite:  entrez Gen Id(Mapping) stimmen mit den Id's HumanSl / FlySL / MouseSL überein
+* Oma Seite:  entrez Gen Id(Mapping) stimmen mit den Id's HumanSL / FlySL / MouseSL überein
 * Die ncbi_id der essential Gene passen mit den anderen überein.
 
 == Gelöschte Daten
@@ -41,6 +41,8 @@ Mappings:
 
 * Relationen(1:1 1:m ...) wird nicht benötigt, die gene sind mehrmals da
 * Spalte nach Relationen ist unnötig
+* Daten wie z. B. HUMAN1234 oder MOUSE1234
+werden ignoriert
 
 Essential
 
@@ -71,6 +73,24 @@ Wir benutzen Typescript um die Daten in unsere Datenbank einzuspielen und auch u
 include::databaseQueries/createTables.sql[]
 ----
 
+== Score
+
+== Get Started
+
+* At first, you have to install the dependencies in the src folder.
+[source, bash]
+----
+npm install
+----
+
+* Now you have to do following command.
+[source, bash]
+----
+npm start
+----
+
+* Enter your GeneId and you can look at the results. We recommend to try the GeneId 1856.
+
 == Gene-Inputs
 
 * 84930
@@ -80,27 +100,6 @@ image::img/gene-84930.png[]
 * 4233
 
 image::img/gene-4233.png[]
-
-== How To Get Started
-
-* Transpile Typescript to Javascript
-[source, bash]
-----
-tsc [filename].ts
-----
-
-* Execute Javascript
-[source, bash]
-----
-node [filename].js
-----
-
-=== How To Get Score For Gene
-
-[source, bash]
-----
-npx ts-node calculate.ts [geneId]
-----
 
 == Description for Typescript Files
 
