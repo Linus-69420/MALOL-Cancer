@@ -10,7 +10,7 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 
 * Mensch
 * Maus
-* Fliege (wgbr)
+* Fliege
 
 === Angabe
 
@@ -77,6 +77,6 @@ include::databaseQueries/createTables.sql[]
 
 image::img/gene-84930.png[]
 
-* 18148
+* 4233
 
-image::img/gene-18148.png[]
+image::img/gene-4233.png[]
