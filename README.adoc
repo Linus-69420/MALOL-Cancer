@@ -80,3 +80,30 @@ image::img/gene-84930.png[]
 * 4233
 
 image::img/gene-4233.png[]
+
+== How To Get Started
+
+* Transpile Typescript to Javascript
+[source, bash]
+----
+tsc [filename].ts
+----
+
+* Execute Javascript
+[source, bash]
+----
+node [filename].js
+----
+
+== Description for Typescript Files
+
+* insertEssentialyHuman
+** inserts data from CSEGs_CEGs.csv into the database (table: Gene)
+* calculate
+** calculates the score
+* insertMappingData
+** inserts mapping-data from human-fly-gene-mapping.csv and human-mouse-gene-mapping.csv
+into the database (table: MappingData)
+* insertSLData
+** inserts sl-data from Human_SL.csv, Fly_SL.csv and Mouse_SL.csv into the database
+(table: GenePairSL)
