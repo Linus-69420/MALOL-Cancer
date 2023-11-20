@@ -22,6 +22,16 @@ Moritz Gruber, Armin Salkovic, Linus Nestler,  Oliver Daxinger, Luka Cvijic
 * Man muss noch schauen, ob diese Menschen-Gene für den Mensch essenziell sind.
 * Wenn nicht, kann man annehmen, dass das Gen x im Menschen durch ein Gen (Das in der Maus eine Zelle auslöscht) auch im Menschen eine Zelle auslöscht.
 
+=== Verwendete Daten
+* link:https://v3.ogee.info/#/downloads[CSEGs_CEGs.csv] -> essentielle Gene
+* link:https://synlethdb.sist.shanghaitech.edu.cn/#/download[SL-Data] -> synthetisch letale Gen-Paare
+** Human_SL.csv
+** Fly_SL.csv
+** Mouse_SL.csv
+* link:https://omabrowser.org/oma/home/[Mapping-Data] -> mapping zwischen Genen gleicher und verschiedener Spezien
+** human-mouse-gene-mapping.csv
+** human-fly-gene-mapping.csv
+
 === IDs Mapping
 
 * Oma Seite:  entrez Gen Id(Mapping) stimmen mit den Id's HumanSL / FlySL / MouseSL überein
@@ -75,31 +85,45 @@ include::databaseQueries/createTables.sql[]
 
 == Score
 
+* Ausgangswert = 10
+* Falls ein Gen essenziell ist, so gibt es 2 Fälle:
+** CSEGs: (Aktueller Score) * 0.3
+** CEGs: (Aktueller Score) * 0.1
+* Danach wird der Score mit dem rStatisticScore eines SL Paares multipliziert, z. B.:
+** (Aktueller Score) * 0.8
+** (Aktueller Score) * 0.4
+* Somit ergibt sich zum Schluss 1 Score für jedes SL Paar (je höher desto besser)
+
 == Get Started
 
-* At first, you have to install the dependencies in the src folder.
+[source, bash]
+----
+cd src
+----
+
+* Als erstes, muss man alle Abhängigkeiten installieren.
 [source, bash]
 ----
 npm install
 ----
 
-* Now you have to do following command.
+* Jetzt führe folgenden Befehl aus.
 [source, bash]
 ----
 npm start
 ----
 
-* Enter your GeneId and you can look at the results. We recommend to try the GeneId 1856.
+* Geben Sie ihre GeneId ein und sehen Sie sich die Ergebnisse an. Wir empfehlen das Gen mit der GeneId 1856 als Probe.
 
 == Gene-Inputs
 
-* 84930
+* 1856
 
-image::img/gene-84930.png[]
+image::img/gene-1856.png[]
 
-* 4233
+* 7975
 
-image::img/gene-4233.png[]
+image::img/gene-7975.png[]
 
 == Description for Typescript Files
 
